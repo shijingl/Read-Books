@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import NotFound from './NotFound';
+import NotFound from './components/NotFound';
 import './App.css'
 
 
@@ -28,6 +28,7 @@ class BooksApp extends React.Component {
                 </div>
               )}
             />
+            <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
       </div>
