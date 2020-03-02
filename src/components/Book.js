@@ -1,10 +1,14 @@
 import React from 'react';
+import noCover from '../images/nocover.jpg';
 
 const Book = props => {
     const { book } = props;
 
-    const coverImg = book.imageLinks.thumbnail;
-    const title = book.title;
+    const coverImg =
+    book.imageLinks && book.imageLinks.thumbnail
+      ? book.imageLinks.thumbnail
+      : noCover;
+    const title = book.title ? book.title : 'No title available';
 
     return (
       <li>
