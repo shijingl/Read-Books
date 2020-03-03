@@ -1,5 +1,7 @@
 import React from 'react';
 import noCover from '../images/nocover.jpg';
+import PropTypes from 'prop-types';
+
 
 const Book = props => {
     const { book } = props;
@@ -33,5 +35,11 @@ const Book = props => {
       </li>
     );
 }
+
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
+  changeShelf: PropTypes.func.isRequired
+};
 
 export default Book
