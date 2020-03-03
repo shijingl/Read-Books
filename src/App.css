@@ -231,23 +231,3 @@ button:active {
   text-align: center;
   font-size: 0.8em;
 }
-
-/* not found page */
-/*
-.not-found-title {
-  color: #507461;
-  font: bold 6em/1 'Old Standard TT', serif;
-  margin: 30px auto;
-  width: 50%;
-}
-
-.not-found-img {
-  margin: auto;
-  height: 188px;
-  width: 128px;
-}
-
-.not-found-img img {
-  width: 100%;
-}
-*/
