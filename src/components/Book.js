@@ -20,7 +20,8 @@ const Book = props => {
             />
           </div>
           <div className="book-title">{title}</div>
-          {/* Check for authors and render each on separate line if exist*/
+          {
+          /* Check for authors and render each on separate line if exist*/
           book.authors &&
             book.authors.map((author, index) => (
               <div className="book-authors" key={index}>

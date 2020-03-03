@@ -1,6 +1,7 @@
 import React from 'react';
-import * as BooksAPI from './data/BooksAPI';
 import { Route, Switch } from 'react-router-dom';
+import * as BooksAPI from './data/BooksAPI';
+import BookList from './components/BookList';
 import NotFound from './components/NotFound';
 import Search from './components/Search';
 import { Link } from 'react-router-dom';
@@ -35,6 +36,7 @@ class BooksApp extends React.Component {
                 <div className="list-books-title">
                   <h1>MyReads Tracking Apps</h1>
                 </div>
+
                 <div className="open-search">
                   <Link to="/search">Search</Link>
                 </div>
