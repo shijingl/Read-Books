@@ -3,6 +3,7 @@ import * as BooksAPI from './data/BooksAPI';
 import { Route, Switch } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import Search from './components/Search';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
@@ -17,7 +18,6 @@ class BooksApp extends React.Component {
 
   render() {
     const { books } = this.state;
-    // console.log(books);
     return (
       <div className="app">
         <Switch>
@@ -32,6 +32,12 @@ class BooksApp extends React.Component {
             path="/"
             render={() => (
               <div className="list-books">
+                <div className="list-books-title">
+                  <h1>MyReads Tracking Apps</h1>
+                </div>
+                <div className="open-search">
+                  <Link to="/search">Search</Link>
+                </div>
               </div>
             )}
           />
