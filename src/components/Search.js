@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as BooksAPI from '../data/BooksAPI';
 import Book from './Book';
 import PropTypes from 'prop-types';
-import {DebounceInput} from 'react-debounce-input';
+import { DebounceInput } from 'react-debounce-input';
 
 class Search extends Component {
   state = {
@@ -14,12 +14,13 @@ class Search extends Component {
   
   getBooks = event => {
     const query = event.target.value;
-    this.setState({ query });
+    const trimed_query = query.trim()
+    this.setState({ trimed_query });
 
     // if user input => run the search
-    if (query) {
-      BooksAPI.search(query.trim(), 20).then(books => {
-        books.length > 0
+    if (trimed_query) {
+      BooksAPI.search(trimed_query, 20).then(books => {
+        Array.isArray(books) && books.length
           ? this.setState({ newBooks: books, searchErr: false })
           : this.setState({ newBooks: [], searchErr: true });
       });
