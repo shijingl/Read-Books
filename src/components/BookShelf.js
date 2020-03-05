@@ -23,7 +23,8 @@ class BookShelf extends Component {
 }
 
 BookShelf.propTypes = {
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  changeShelf: PropTypes.func.isRequired
 }
 
 export default BookShelf;
