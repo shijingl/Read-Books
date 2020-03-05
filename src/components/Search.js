@@ -31,7 +31,8 @@ class Search extends Component {
 
   render() {
       const { query, newBooks, searchErr } = this.state;
-      // console.log(query);
+      const { books, changeShelf } = this.props;
+
       return (
         <div className="search-books">
           <div className="search-books-bar">
@@ -56,6 +57,8 @@ class Search extends Component {
                     <Book
                         key={book.id}
                         book={book}
+                        books={books}
+                        changeShelf={changeShelf}
                     />
                     ))}
                 </ol>
@@ -71,7 +74,8 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  changeShelf: PropTypes.func.isRequired
 };
 
 export default Search
