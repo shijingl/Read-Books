@@ -9,9 +9,6 @@ const NotFound = () => (
     </h1>
     <figure className="not-found-img">
       <img src={notFound} alt="Page Not Found" />
-      <figcaption>
-        Photo by Hope House Press - Leather Diary Studio on Unsplash
-      </figcaption>
     </figure>
     <div className="home-link">
       <Link to="/">Go back to try again</Link>
