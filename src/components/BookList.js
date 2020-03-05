@@ -18,7 +18,10 @@ const BookList = props => {
           <div className="bookshelf" key={index}>
             <h2 className="bookshelf-title">{shelf.title}</h2>
             <div className="bookshelf-books">
-              <BookShelf books={shelfBooks} changeShelf={changeShelf}/>
+              <BookShelf 
+               books={shelfBooks} 
+               changeShelf={changeShelf}
+              />
             </div>
           </div>
         );
@@ -28,7 +31,8 @@ const BookList = props => {
 };
 
 BookList.propTypes = {
-  books: PropTypes.array.isRequired
+  books: PropTypes.array.isRequired,
+  changeShelf: PropTypes.func.isRequired
 };
 
 export default BookList;
